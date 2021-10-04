@@ -12,8 +12,8 @@ import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_quiz_choice.*
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
 
-class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
-//Initializing variables
+class QuizQuestionsActivityEasy : AppCompatActivity(), View.OnClickListener {
+    //Initializing variables
     private var mCurrentPosition:Int = 1
     private var mQuestionList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int = 0
@@ -26,8 +26,10 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_questions)
 
-         mUsername = intent.getStringExtra(Constants.USER_NAME)
-         mQuestionList = Constants.getQuestions()
+        mUsername = intent.getStringExtra(Constants.USER_NAME)
+
+
+        mQuestionList = Constants.getQuestionsEasy()
 
 
         setQuestion()
@@ -126,7 +128,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                         btn_submit.text = "Go To Next Question"
                     }
                     mSelectedOptionPosition = 0
-                    }
+                }
 
 
             }

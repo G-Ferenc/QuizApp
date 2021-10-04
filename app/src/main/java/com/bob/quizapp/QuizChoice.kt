@@ -1,5 +1,6 @@
 package com.bob.quizapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -11,20 +12,62 @@ import kotlinx.android.synthetic.main.activity_quiz_choice.*
 
 class QuizChoice: AppCompatActivity() {
 
+    private var mUsername: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_choice)
 
         v_Easybtn.findViewById<TextView>(R.id.v_Easybtn)
+        easybtn.findViewById<TextView>(R.id.easybtn)
+        mediumbtn.findViewById<TextView>(R.id.mediumbtn)
+        hardbtn.findViewById<TextView>(R.id.hardbtn)
+        v_Hardbtn.findViewById<TextView>(R.id.v_Hardbtn)
 
-        v_Easybtn.setOnClickListener(){
-            val intent = Intent(this, QuizQuestionsActivity::class.java)
-            intent.putExtra(Constants.USER_NAME, et_name.text.toString())
+        mUsername = intent.getStringExtra(Constants.USER_NAME)
+
+
+
+
+        v_Easybtn.setOnClickListener{
+
+            val intent = Intent(this,QuizQuestionsActivity::class.java)
+            intent.putExtra(Constants.USER_NAME,mUsername)
             startActivity(intent)
+            finish()
+        }
+
+        easybtn.setOnClickListener{
+            val intent = Intent(this,QuizQuestionsActivityEasy::class.java)
+            intent.putExtra(Constants.USER_NAME,mUsername)
+            startActivity(intent)
+            finish()
+        }
+
+        mediumbtn.setOnClickListener{
+            val intent = Intent(this,QuizQuestionsActivityEasy::class.java)
+            intent.putExtra(Constants.USER_NAME,mUsername)
+            startActivity(intent)
+            finish()
+        }
+
+        hardbtn.setOnClickListener{
+            val intent = Intent(this,QuizQuestionsActivityEasy::class.java)
+            intent.putExtra(Constants.USER_NAME,mUsername)
+            startActivity(intent)
+            finish()
+        }
+        v_Hardbtn.setOnClickListener{
+            val intent = Intent(this,QuizQuestionsActivityEasy::class.java)
+            intent.putExtra(Constants.USER_NAME,mUsername)
+            startActivity(intent)
+            finish()
         }
 
 
     }
+
+
 }
 
 
