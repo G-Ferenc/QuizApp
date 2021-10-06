@@ -8,6 +8,18 @@
     android:background="@drawable/bckgrnd"
     tools:context=".QuizChoice">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select Difficulty:"
+        android:textColor="@color/white"
+        android:textSize="46sp"
+        android:textStyle="bold">
+
+    </TextView>
+
     <TextView
         android:id="@+id/v_Easybtn"
         android:layout_width="match_parent"

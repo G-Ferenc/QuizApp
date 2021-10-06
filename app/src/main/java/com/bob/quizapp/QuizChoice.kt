@@ -28,39 +28,35 @@ class QuizChoice: AppCompatActivity() {
 
 
 
-        v_Easybtn.setOnClickListener{
+        v_Easybtn.setOnClickListener {
 
-            val intent = Intent(this,QuizQuestionsActivity::class.java)
-            intent.putExtra(Constants.USER_NAME,mUsername)
+            val intent = Intent(this, QuizQuestionsActivity::class.java)
+            intent.putExtra(Constants.USER_NAME, mUsername)
             startActivity(intent)
-            finish()
+
         }
 
         easybtn.setOnClickListener{
             val intent = Intent(this,QuizQuestionsActivityEasy::class.java)
             intent.putExtra(Constants.USER_NAME,mUsername)
             startActivity(intent)
-            finish()
         }
 
         mediumbtn.setOnClickListener{
             val intent = Intent(this,QuizQuestionsActivityMedium::class.java)
             intent.putExtra(Constants.USER_NAME,mUsername)
             startActivity(intent)
-            finish()
         }
 
         hardbtn.setOnClickListener{
             val intent = Intent(this,QuizQuestionsActivityHard::class.java)
             intent.putExtra(Constants.USER_NAME,mUsername)
             startActivity(intent)
-            finish()
         }
         v_Hardbtn.setOnClickListener{
             val intent = Intent(this,QuizQuestionsActivityVHard::class.java)
             intent.putExtra(Constants.USER_NAME,mUsername)
             startActivity(intent)
-            finish()
         }
 
 
