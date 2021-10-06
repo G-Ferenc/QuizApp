@@ -6,7 +6,7 @@
 
 
     <application
-        android:fullBackupOnly="true"
+        android:allowBackup="true"
         android:icon="@drawable/quizlogobig"
         android:label="@string/app_name"
         android:roundIcon="@drawable/quizlogobig"
@@ -34,6 +34,18 @@
             android:theme="@style/NoActionBarTheme" />
         <activity
             android:name=".QuizQuestionsActivityEasy"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".QuizQuestionsActivityMedium"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".QuizQuestionsActivityHard"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".QuizQuestionsActivityVHard"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme" />
         <activity

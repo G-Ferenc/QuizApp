@@ -9,13 +9,13 @@
     tools:context=".QuizChoice">
 
     <TextView
+        android:id="@+id/v_Easybtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Very Easy"
-        android:id="@+id/v_Easybtn"
-        android:textSize="30sp"
         android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold">
 
     </TextView>
@@ -67,8 +67,6 @@
         android:textStyle="bold">
 
     </TextView>
-
-
 
 
 
